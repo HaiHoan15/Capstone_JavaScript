@@ -1,0 +1,120 @@
+<!-- trang chủ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Danh sách sản phẩm</title>
+    <!-- giỏ hàng css  -->
+    <link rel="stylesheet" href="./css/cart.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Google Fonts + FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- header  -->
+    <header style="background: #222; padding: 15px;">
+        <nav style="display: flex; justify-content: center; gap: 40px;">
+            <a href="home.html" style="color: white; text-decoration: none; font-weight: bold;">Trang chủ</a>
+            <!-- <a href="admin.html" style="color: white; text-decoration: none; font-weight: bold;">Sản phẩm</a> -->
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Đăng nhập</a>
+        </nav>
+    </header>
+
+    <div class="page">
+        <h1>Danh sách sản phẩm</h1>
+
+        <!-- giỏ hàng  -->
+        <!-- Nút mở giỏ hàng -->
+        <nav id="main-nav">
+            <a class="cart-button" href="#">
+                <span class="bag-count" id="cart-count">0</span>
+                <span class="bag-icon">🛍️</span>
+                <span class="bag-label">Giỏ hàng</span>
+            </a>
+        </nav>
+
+        <!-- Giỏ hàng slide-in -->
+        <aside id="sidebar-cart">
+            <main>
+                <a href="#" class="close-button"><span class="close-icon">×</span></a>
+                <h2>🛒 Giỏ hàng <span class="count" id="cart-count-header">0</span></h2>
+                <div class="cart-footer">
+                    <div class="total">
+                        <span>Tổng:</span>
+                        <strong id="cart-total">$0</strong>
+                    </div>
+                    <button id="btnCheckout" class="checkout-btn">Thanh toán</button>
+                </div>
+                <ul class="cart-items" id="cart-items">
+                    <!-- Danh sách sản phẩm sẽ được JS render -->
+                </ul>
+            </main>
+        </aside>
+
+
+        <!-- Lớp phủ nền -->
+        <div id="sidebar-cart-curtain"></div>
+
+        <!-- Dropdown -->
+        <label for="productType">Lọc theo loại:</label>
+        <select id="productType">
+            <option value="all">Tất cả</option>
+            <option value="iphone">iPhone</option>
+            <option value="samsung">Samsung</option>
+        </select>
+
+        <!-- Danh sách sản phẩm -->
+        <div id="productList" class="product-list grid"></div>
+
+        <!-- Giỏ hàng -->
+        <!-- <h2>Giỏ hàng</h2>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="cartTableBody"></tbody>
+        </table>
+        <h3 id="totalPrice">Tổng tiền: $0</h3>
+        <button id="btnCheckout">Thanh toán</button>
+    </div> -->
+
+        <footer style="background-color: #222; color: #fff; padding: 20px 40px;">
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                <!-- Giới thiệu ngắn -->
+                <div style="flex: 1; min-width: 250px;">
+                    <h3>Giới thiệu</h3>
+                    <p>Chào mừng bạn đến với cửa hàng điện thoại cao cấp. Chúng tôi chuyên cung cấp các dòng smartphone
+                        chính hãng, chất lượng với giá tốt nhất.</p>
+                </div>
+
+                <!-- Thông tin liên hệ -->
+                <div style="flex: 1; min-width: 250px;">
+                    <h3>Thông tin liên hệ</h3>
+                    <p>📧 Gmail: <a href="mailto:buyiphone@gmail.com" style="color: #4dc0e3;">buyiphone@gmail.com</a>
+                    </p>
+                    <p>📞 Hotline: <a href="tel:6969696969" style="color: #4dc0e3;">696-969-6969</a></p>
+                    <p>👤 Made by: <strong>Nguyễn Hải Hoang</strong></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- giỏ hàng JS  -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="./js/controllers/cart.js"></script>
+
+        <!-- JS -->
+        <script type="module" src="./js/controllers/main.js"></script>
+</body>
+
+</html>

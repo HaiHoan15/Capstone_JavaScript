@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chọn vai trò</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 26px;
+      font-weight: 500;
+    }
+
+    button {
+      width: 240px;
+      padding: 15px 0;
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: 500;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffffff;
+      color: #6e48aa;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f1f1f1;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bạn muốn đăng nhập với vai trò nào?</h2>
+    <button onclick="loginAs('user')">👤 Người dùng</button>
+    <br />
+    <button onclick="loginAs('admin')">🛠️ Quản trị viên</button>
+  </div>
+
+  <!-- JS -->
+  <script src="js/controllers/login.js"></script>
+</body>
+</html>

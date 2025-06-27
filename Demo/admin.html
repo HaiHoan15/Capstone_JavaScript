@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header style="background: #222; padding: 15px;">
+        <nav style="display: flex; justify-content: center; gap: 40px;">
+            <!-- <a href="home.html" style="color: white; text-decoration: none; font-weight: bold;">Trang chủ</a> -->
+            <a href="admin.html" style="color: white; text-decoration: none; font-weight: bold;">Sản phẩm</a>
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Đăng nhập</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="container my-4">
+        <div class="d-flex justify-content-between align-items-center bg-primary text-white p-3 rounded-top">
+            <h2 class="m-0">Phone Management</h2>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#productModal">
+                <i class="bi bi-plus-circle"></i> Add Phone
+            </button>
+        </div>
+
+        <div class="my-3">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên..." class="form-control mb-2">
+
+            <label for="sortSelect">Sắp xếp theo giá:</label>
+            <select id="sortSelect" class="form-select w-auto d-inline-block ms-2">
+                <option value="none">Không sắp xếp</option>
+                <option value="asc">Tăng dần</option>
+                <option value="desc">Giảm dần</option>
+            </select>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Photo</th>
+                    <th>Màn hình</th>
+                    <th>Camera sau</th>
+                    <th>Camera trước</th>
+                    <th>Description</th>
+                    <th>Loại</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="adminProductTable"></tbody>
+        </table>
+    </main>
+
+    <!-- Modal Thêm / Sửa Sản Phẩm -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" id="productForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Phone Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="hidden" id="productId">
+                    <div class="mb-2"><input type="text" id="name" placeholder="Phone name" class="form-control"
+                            required></div>
+                    <div class="mb-2"><input type="number" id="price" placeholder="Price" class="form-control" required>
+                    </div>
+                    <div class="mb-2"><input id="screen" placeholder="Screen" class="form-control"></div>
+                    <div class="mb-2"><input id="backCamera" placeholder="Back Camera" class="form-control"></div>
+                    <div class="mb-2"><input id="frontCamera" placeholder="Front Camera" class="form-control"></div>
+                    <div class="mb-2"><input id="img" placeholder="Image link" class="form-control" required></div>
+                    <div class="mb-2"><input id="desc" placeholder="Description" class="form-control"></div>
+                    <div class="mb-2"><input id="type" placeholder="Loại (samsung/iphone)" class="form-control"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Lưu</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #222; color: #fff; padding: 20px 40px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px;">
+                <h3>Giới thiệu</h3>
+                <p>Chào mừng bạn đến với cửa hàng điện thoại cao cấp. Chúng tôi chuyên cung cấp các dòng smartphone
+                    chính hãng, chất lượng với giá tốt nhất.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <h3>Thông tin liên hệ</h3>
+                <p>📧 Gmail: <a href="mailto:buyiphone@gmail.com" style="color: #4dc0e3;">buyiphone@gmail.com</a></p>
+                <p>📞 Hotline: <a href="tel:6969696969" style="color: #4dc0e3;">696-969-6969</a></p>
+                <p>👤 Made by: <strong>Nguyễn Hải Hoang</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- JS -->
+    <script type="module" src="js/controllers/admin.js"></script>
+</body>
+
+</html>

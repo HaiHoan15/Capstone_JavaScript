@@ -1,0 +1,63 @@
+main {
+            padding: 40px;
+        }
+
+        h1,
+        h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #searchInput,
+        #sortSelect,
+        form input,
+        form button {
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        table {
+            background: #fff;
+            color: #333;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #444;
+            color: #fff;
+        }
+
+        td img {
+            width: 60px;
+            height: auto;
+        }
+
+        form {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            color: #fff;
+            max-width: 500px;
+        }
+
+        form button {
+            background-color: #00c853;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #00a744;
+        }

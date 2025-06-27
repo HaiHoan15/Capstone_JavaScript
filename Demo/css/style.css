@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #9b0d82, #d43b2c);
+  color: white;
+  min-height: 100vh;
+}
+
+.page {
+  padding: 20px;
+}
+
+/* --- Danh sách sản phẩm --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center; 
+  gap: 40px;
+  margin-top: 20px;
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.card {
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .top {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .top i {
+  font-size: 20px;
+}
+
+.card .status {
+  color: #8bc34a;
+  font-style: italic;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.card .info {
+  background-color: #333;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  transition: max-height 0.3s ease;
+}
+
+.card .info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.card .info .desc {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 5px 0;
+}
+
+.card .info .price {
+  color: #ff5252;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.card .info button {
+  background-color: #00c853;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.card .info button:hover {
+  background-color: #00b342;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  background-color: #333;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.card .info h3 {
+  margin-bottom: 5px;
+}
+
+.card .info .desc {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+/* header  */
+header {
+  background: #111;
+  padding: 15px 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #4dc0e3;
+}
